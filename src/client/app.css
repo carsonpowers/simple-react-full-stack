@@ -1,8 +1,72 @@
-h1 {
-  color: green;
+#root,
+video,
+html,
+iframe,
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #010101;
 }
 
-body {
+#root {
+  background-color: black;
+}
+
+video {
+  opacity: 0;
+  animation: 50s ease-out 0s 1 slideInFromLeft;
+  animation-fill-mode: forwards;
+  width: 100vw;
+  filter: blur(5px);
+  height: 100vh;
+  object-fit: fill;
+}
+
+.message {
+  color: white;
+  position: absolute;
+  font-family: "MyriadPro";
   text-align: center;
-  margin: auto;
+  font-size: 7vw;
+  margin: 0;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border: solid 1px white;
+  padding: 0px;
+  justify-content: space-evenly;
+  opacity: 0.02;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+li {
+  display: table;
+}
+
+.overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("/assets/fonts/MyriadPro-LightSemiExt.otf");
 }
