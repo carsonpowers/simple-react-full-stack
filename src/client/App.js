@@ -45,9 +45,6 @@ export default function Example() {
   return (
     <React.Fragment>
       <Message name="CARSON POWERS" />
-      <Box className="box">
-        <span>something</span>
-      </Box>
       <video id="vid" playsInline autoPlay loop muted>
         <source src="../assets/webm/rainy-window.webm" type='video/webm; codecs="vp8, vorbis"' />
       </video>
