@@ -26,8 +26,9 @@ export default function Example() {
     <React.Fragment>
       <Message name="CARSON POWERS" />
       <video id="vid" playsInline autoPlay loop muted>
-        <source src="../assets/webm/city-sideways.webm" type='video/webm; codecs="vp8, vorbis"' />
+        <source src="../assets/webm/rainy-window.webm" type='video/webm; codecs="vp8, vorbis"' />
       </video>
+      <div className="overlay" />
     </React.Fragment>
   )
 }
