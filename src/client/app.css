@@ -38,6 +38,15 @@ video {
   opacity: 0.15;
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ff1c68;
+  transform-origin: 50% 50%;
+  position: absolute;
+  z-index: 1;
+}
+
 .overlay {
   background-image: url('/assets/img/128-184.jpg');
   background-repeat: repeat;

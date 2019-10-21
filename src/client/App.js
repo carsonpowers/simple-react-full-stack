@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './app.css'
+import posed from 'react-pose'
+
 // import R from 'ramda'
 // import Effects from './Effects'
 
@@ -22,9 +24,16 @@ export default function Example() {
     )
   }
 
+  const Box = posed.div({
+    pressable: true,
+    init: { scale: 1, 'border-radius': '0px' },
+    press: { scale: 0.9, 'border-radius': '20px' },
+  })
+
   return (
     <React.Fragment>
       <Message name="CARSON POWERS" />
+      <Box className="box" />
       <video id="vid" playsInline autoPlay loop muted>
         <source src="../assets/webm/rainy-window.webm" type='video/webm; codecs="vp8, vorbis"' />
       </video>
