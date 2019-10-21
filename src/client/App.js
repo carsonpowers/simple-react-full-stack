@@ -26,14 +26,28 @@ export default function Example() {
 
   const Box = posed.div({
     pressable: true,
-    init: { scale: 1, 'border-radius': '0px' },
-    press: { scale: 0.9, 'border-radius': '20px' },
+    init: {
+      scale: 1,
+      'border-radius': '0px',
+      transition: { type: 'spring', stiffness: 500, damping: 10 },
+    },
+    press: {
+      scale: 0.9,
+      'border-radius': '5px',
+      transition: { type: 'spring', stiffness: 500, damping: 10 },
+    },
+  })
+
+  useEffect(() => {
+    console.log('comp did mount')
   })
 
   return (
     <React.Fragment>
       <Message name="CARSON POWERS" />
-      <Box className="box" />
+      <Box className="box">
+        <span>something</span>
+      </Box>
       <video id="vid" playsInline autoPlay loop muted>
         <source src="../assets/webm/rainy-window.webm" type='video/webm; codecs="vp8, vorbis"' />
       </video>

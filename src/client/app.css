@@ -45,6 +45,7 @@ video {
   transform-origin: 50% 50%;
   position: absolute;
   z-index: 1;
+  text-align: center;
 }
 
 .overlay {
